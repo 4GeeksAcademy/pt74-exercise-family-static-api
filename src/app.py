@@ -71,7 +71,7 @@ def get_member(id: int):
 
 @app.route("/member/<int:id>", methods=["DELETE"])
 def delete_member(id: int):
-    person = jackson_family.delete_member(id)
+    jackson_family.delete_member(id)
     return (jsonify({
         "done": True
     }), 200)
